@@ -11,7 +11,7 @@
          <div class="row">
          @foreach ($recommend_products as $recommend_product)
          <div class="4">
-            <a href="{{ route('products.show', $recommend_products) }}">
+            <a href="{{ route('products.show', $recommend_product) }}">
                 @if ($recommend_product->image !=="")
                 <img src="{{ asset($recommend_product->image) }}" class="img-thumbnail">
                 @else
@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-12">
                     <p class="samuraimart-product-label mt-2">
-                        {{ $recommend_products->name }}<br>
+                        {{ $recommend_product->name }}<br>
                         <label>￥{{ $recommend_product->price }}</label>
                     </p>
                 </div>
