@@ -10,7 +10,7 @@
          <h1>おすすめ商品</h1>
          <div class="row">
          @foreach ($recommend_products as $recommend_product)
-         <div class="4">
+         <div class="col-4">
             <a href="{{ route('products.show', $recommend_product) }}">
                 @if ($recommend_product->image !=="")
                 <img src="{{ asset($recommend_product->image) }}" class="img-thumbnail">
@@ -28,7 +28,8 @@
             </div>
          </div>
          @endforeach
- 
+         </div>
+         
          <h1>新着商品</h1>
          <div class="row">
             @foreach ($recently_products as $recently_product)
